@@ -1,0 +1,20 @@
+{
+  "name": "Jawatte Hostel Complaint Managment System",
+  "version": "1.0.0",
+  "description": "",
+  "main": "login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anas Mohammed Riza",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mysql": "^2.18.1",
+    "socket.io": "^2.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
