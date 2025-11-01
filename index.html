@@ -4,10 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"
-	href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <script src="js/jquery-1.9.1.js"></script>
 <script src="js/bootstrap.js"></script>
@@ -227,6 +225,12 @@ form2.submit(function () {
 		success: function (data) {
 			console.log(data);
 			if(data=="true"){
+				// Clear all input fields after successful registration
+				$('#form2 input[type="text"]').val('');
+				$('#form2 input[type="email"]').val('');
+				$('#form2 input[type="password"]').val('');
+				$('#form2 input[type="radio"]').prop('checked', false);
+				
 				document.getElementById("alert-box").innerHTML="Successfully Registered";
 				document.getElementById("alert-box").className="alert alert-success";
 				document.getElementById("alert-box").style.visibility = "visible";
@@ -240,9 +244,9 @@ form2.submit(function () {
 				$('#alert-box').fadeIn('slow').delay(2000);
 				$('#alert-box').fadeOut('slow').delay(2000);
 			}
-			}	
+		}	
 	});
-return false;
+	return false;
 });
 
 $.ajax({
@@ -286,5 +290,4 @@ $( "#toggleSign" ).click(function() {
  	});
 	}
 });
-
 </script>
